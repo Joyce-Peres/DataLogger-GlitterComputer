@@ -440,21 +440,17 @@ graph TD
 
 ### Grupo Glitter Computer
 
-| Membro | Função |
-|--------|--------|
-| **[Nome]** | Desenvolvimento de Software |
-| **[Nome]** | Hardware e Montagem |
-| **[Nome]** | Documentação e Testes |
+| Membro |
+|--------|
+| **[Ana Lara Dellacorte Simões]** |
+| **[Eláine Gomes Moreira]** | 
+| **[Joyce da Costa Peres]** |
+| **[Rayssa Alves André]** | 
 
 </div>
 
 ---
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
----
 
 <div align="center">
   
@@ -463,17 +459,4 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 [⬆ Voltar ao topo](#-glitter-computer-)
 
 </div>
-```
 
-Este README melhorado apresenta:
-- Emojis e ícones para melhor visualização
-- Tabelas organizadas e coloridas
-- Badges de status profissionais
-- Diagramas Mermaid para visualização
-- Estrutura hierárquica clara
-- Seções colapsáveis para informações detalhadas
-- Formatação de código com destaque
-- Design moderno e responsivo
-- Navegação com índice
-- Visualizações de dados em formato JSON
-- Código formatado com estilo
