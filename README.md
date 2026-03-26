@@ -14,6 +14,7 @@
 
 ## 📋 Índice
 - [Documentação](#-documentação)
+- [Aplicativo e Simulação](#-aplicativo-e-simulação)
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Características](#-características)
 - [Hardware](#-hardware)
@@ -33,6 +34,13 @@ Para informações detalhadas sobre especificações elétricas, pinagem, e proc
 
 - [📄 Ficha Técnica (PDF)](ficha-tecnica.pdf)
 - [📖 Manual Técnico do Usuário (PDF)](manual-tecnico-usuario.pdf)
+
+---
+## 📱 Aplicativo e Simulação
+
+- Baixe o aplicativo oficial do Glitter Computer: [📲 Download do app](https://drive.google.com/uc?export=download&id=12PkN6zYALZG0rEajEAol30ZTzrW8Svxc)
+- Acesse a simulação do sistema no Wokwi: [🧪 Simulação Online](https://wokwi.com/projects/458339246399975425)
+
 ---
 ## 🎯 Sobre o Projeto
 
@@ -285,7 +293,7 @@ switch(modoSistema) {
 
 ## 📱 Comunicação Bluetooth
 
-Baixe o aplicativo oficial do Glitter Computer: [📲 Download do app](https://drive.google.com/uc?export=download&id=12PkN6zYALZG0rEajEAol30ZTzrW8Svxc)
+Consulte a seção [📱 Aplicativo e Simulação](#-aplicativo-e-simulação) para baixar o app oficial e acessar a simulação online do sistema.
 
 ### Comandos Disponíveis
 
