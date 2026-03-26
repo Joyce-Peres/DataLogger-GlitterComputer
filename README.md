@@ -30,8 +30,8 @@
 ##  Documentação
 Para informações detalhadas sobre especificações elétricas, pinagem, e procedimentos de operação, consulte os documentos oficiais:
 
-- [📄 Ficha Técnica (PDF)](./docs/FICHA_TÉCNICA.pdf)
-- [📖 Manual Técnico do Usuário (PDF)](./docs/MANUAL_TÉCNICO.pdf)
+- [📄 Ficha Técnica (PDF)](./docs/FICHA_TÉCNICA.docx.pdf)
+- [📖 Manual Técnico do Usuário (PDF)](./docs/MANUAL_TÉCNICO_DO_USUARIO.docx.pdf)
 
 ---
 ## 🎯 Sobre o Projeto
