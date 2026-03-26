@@ -25,14 +25,14 @@
 - [Sistema de Alertas](#-sistema-de-alertas)
 - [Troubleshooting](#-troubleshooting)
 - [Créditos](#-créditos)
-
+  
 ---
-##  Documentação
+## 📚 Documentação
+
 Para informações detalhadas sobre especificações elétricas, pinagem, e procedimentos de operação, consulte os documentos oficiais:
 
-- [📄 Ficha Técnica (PDF)](./docs/FICHA_TÉCNICA.docx.pdf)
-- [📖 Manual Técnico do Usuário (PDF)](./docs/MANUAL_TÉCNICO_DO_USUARIO.docx.pdf)
-
+- [📄 Ficha Técnica (PDF)](./FICHA_TECNICA.docx.pdf)
+- [📖 Manual Técnico do Usuário (PDF)](./MANUAL_TECNICO_DO_USUARIO.docx.pdf)
 ---
 ## 🎯 Sobre o Projeto
 
