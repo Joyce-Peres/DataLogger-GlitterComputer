@@ -466,7 +466,7 @@ graph TD
 
 ### Grupo Glitter Computer
 
-| Membro |
+| Membros |
 |--------|
 | **[Ana Lara Dellacorte Simões]** |
 | **[Eláine Gomes Moreira]** | 
