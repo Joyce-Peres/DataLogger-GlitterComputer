@@ -13,6 +13,7 @@
 ---
 
 ## 📋 Índice
+- [Documentação](#-documentação)
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Características](#-características)
 - [Hardware](#-hardware)
@@ -26,7 +27,13 @@
 - [Créditos](#-créditos)
 
 ---
+##📚 Documentação
+Para informações detalhadas sobre especificações elétricas, pinagem, e procedimentos de operação, consulte os documentos oficiais:
 
+- [📄 Ficha Técnica (PDF)](./docs/FICHA_TÉCNICA.pdf)
+- [📖 Manual Técnico do Usuário (PDF)](./docs/MANUAL_TÉCNICO.pdf)
+
+---
 ## 🎯 Sobre o Projeto
 
 O **Glitter Computer** é um sistema embarcado de alta precisão desenvolvido para monitoramento e controle ambiental. Ideal para estufas, ambientes controlados e automação residencial, o projeto combina sensores de última geração com uma interface intuitiva e recursos avançados de registro de dados.
