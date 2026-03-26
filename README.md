@@ -27,7 +27,7 @@
 - [Créditos](#-créditos)
 
 ---
-##📚 Documentação
+##  Documentação
 Para informações detalhadas sobre especificações elétricas, pinagem, e procedimentos de operação, consulte os documentos oficiais:
 
 - [📄 Ficha Técnica (PDF)](./docs/FICHA_TÉCNICA.pdf)
