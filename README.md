@@ -38,8 +38,12 @@ Para informações detalhadas sobre especificações elétricas, pinagem, e proc
 ---
 ## 📱 Aplicativo e Simulação
 
-- Baixe o aplicativo oficial do Glitter Computer: [📲 Download do app](https://drive.google.com/uc?export=download&id=12PkN6zYALZG0rEajEAol30ZTzrW8Svxc)
+- Baixe o aplicativo oficial do Glitter Computer (APK Android): [📲 Download do app](https://drive.google.com/uc?export=download&id=12PkN6zYALZG0rEajEAol30ZTzrW8Svxc)
 - Acesse a simulação do sistema no Wokwi: [🧪 Simulação Online](https://wokwi.com/projects/458339246399975425)
+    - Observações sobre a simulação:
+        - O Wokwi não possui módulo Bluetooth nem DFPlayer Mini.
+        - O display utilizado na simulação é 14×2 (na prática usamos 20×4).
+        - A simulação representa a **versão C** do hardware, equivalente ao que temos na faculdade.
 
 ---
 ## 🎯 Sobre o Projeto
