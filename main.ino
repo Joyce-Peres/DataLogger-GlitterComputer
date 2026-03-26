@@ -38,6 +38,7 @@ bool modoSom;
 bool modoLed;
 int intervalo;
 bool modoMonit;
+bool usuMudou= false;
 
 // -------- SENSORES --------
 float temperatura;
@@ -85,7 +86,7 @@ void bootGlitter() {
   int cx = 10;
   lcd.clear();
 
-  // 🎵 melodia grave e suave
+  // melodia
   int melodia[] = {262, 294, 330, 294, 262, 220};
   int d = 0;
 
@@ -112,7 +113,7 @@ void bootGlitter() {
   lcd.setCursor(cx,2);
   lcd.write(byte(0));
 
-  // --------  estrela --------
+  // -------- ✨ estrela --------
   lcd.clear();
 
   byte star1[8] = {
@@ -145,7 +146,7 @@ void bootGlitter() {
     delay(120);
   }
 
-  // --------  explosão suave --------
+  // -------- 💥 explosão suave --------
   lcd.clear();
 
   byte sparkA[8] = {0,4,0,10,0,4,0,0};
@@ -165,7 +166,7 @@ void bootGlitter() {
 
   delay(200);
 
-  // --------  glitter --------
+  // -------- ✦ glitter --------
   for(int j=0;j<2;j++){
     lcd.clear();
 
@@ -181,7 +182,7 @@ void bootGlitter() {
     }
   }
 
-  // --------logo --------
+  // -------- 🏷️ logo --------
   lcd.clear();
 
   int finalMelody[] = {262, 330, 392, 330, 262};
@@ -202,7 +203,7 @@ void bootGlitter() {
 
   delay(400);
 
-  // --------  final --------
+  // -------- 💫 final --------
   lcd.clear();
   tocarNotaSuave(262, 400);
 
@@ -312,12 +313,13 @@ void verificarAlertas(){
 static unsigned long segs=0;
 
 if(alerta()&& modoSom){
-  if(millis()-segs>=10000){
-    tone(BUZZER,1500);
-    segs=millis();
+  if(millis()-segs>=2000){
+    segs= millis();
+ 
+      tone(BUZZER,1000);
   }
-}else{
-  noTone(BUZZER);
+  else noTone(BUZZER);
+
 }
 }
 
@@ -377,8 +379,10 @@ if(c=='D'){
   enviarDados();
   Serial.println("Recebi D");
 }
+
 if(c=='0')
 {
+  usuMudou = true;
   Serial.println("Recebi 0");
   modoSistema= 0;
   EEPROM.write(1,modoSistema);
@@ -387,19 +391,18 @@ if(c=='0')
 if(c=='1')
 {
   modoSistema= 3;
-  EEPROM.write(1,modoSistema);
+ usuMudou = true; EEPROM.write(1,modoSistema);
   atualizarModo();
 }
-if(c=='2')
-{
+if(c=='2'){
   modoSistema= 2;
-  EEPROM.write(1,modoSistema);
+ usuMudou = true; EEPROM.write(1,modoSistema);
   atualizarModo();
 }
 if(c=='3')
 {
   modoSistema= 1;
-  EEPROM.write(1,modoSistema);
+ usuMudou = true; EEPROM.write(1,modoSistema);
   atualizarModo();
 }
 }
@@ -420,6 +423,8 @@ lcd.setCursor(0,2);
 lcd.print(sisIngles?"Light:":"Luz:");
 lcd.print(luz);
 
+lcd.setCursor(0,3);
+lcd.print("                    ");
 lcd.setCursor(0,3);
 if(modoSistema == 0) lcd.print(sisIngles?"Monitor Mode": "Modo: Monitor ");
 else if(modoSistema == 1) lcd.print(sisIngles?"Night Mode":"Modo: Noturno");
@@ -519,23 +524,25 @@ if(opcao == 3){tela=1;if (somOn)som(sisIngles?15:11);}
 lcd.clear();
 }
 }
-
+//------------TELA AUDIO--------------
 void telaAudio(){
-  const char* opcoes[3];
+  const char* opcoes[4];
   if (!sisIngles){
   opcoes[0]= "Idioma";
-  opcoes[1]= "Som";
-  opcoes[2]="Voltar";
+  opcoes[1]= "Falas";
+  opcoes[2]= "Som alarmes";
+  opcoes[3]="Voltar";
   }
   else{
   opcoes[0]= "Language";
-  opcoes[1]= "Sound";
-  opcoes[2]= "Back";
+  opcoes[1]= "Speeches";
+  opcoes[2]= "Alarm sound";
+  opcoes[3]= "Back";
 }
 
-navegarMenu(3);
+navegarMenu(4);
 
-for(int i=0;i<3;i++){
+for(int i=0;i<4;i++){
 lcd.setCursor(0,i);
 lcd.print("                    ");
 lcd.setCursor(0,i);
@@ -560,11 +567,14 @@ if(opcao==1){
 somOn=!somOn;
 EEPROM.write(3,somOn);
 }
-if(opcao==2){tela=2;if(somOn)som(sisIngles?15:11);}
+if(opcao==2){
+modoSom=!modoSom;
+}
+if(opcao==3){tela=2;if(somOn)som(sisIngles?15:11);}
 lcd.clear();
 }
 }
-bool usuMudou= false;
+
 // ---------------- MODOS ----------------
 void telaModos(){
 
@@ -768,12 +778,12 @@ intervalo= 5;
 break;
 
 case 3:
-tempMin=16; tempMax=26;
-umidMin=40; umidMax=70;
-luzMax=60;
+tempMin=15; tempMax=25;
+umidMin=30; umidMax=50;
+luzMax=30;
 modoMonit = false;
 modoLed= true;
-modoSom = false;
+modoSom = true;
 somOn= true;
 intervalo= 2;
 break;
