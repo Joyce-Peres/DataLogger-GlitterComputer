@@ -1,7 +1,7 @@
 <div align="center">
   
 # ✨ GLITTER COMPUTER ✨
-### *Sistema Embarcado de Monitoramento Ambiental*
+### *Sistema Embarcado de Monitoramento*
 
 ![Versão](https://img.shields.io/badge/versão-1.0-blue)
 ![Arduino](https://img.shields.io/badge/Arduino-UNO-00979D)
@@ -122,6 +122,7 @@ graph LR
 
 ```cpp
 // Layout da memória EEPROM
+// Layout da memória EEPROM
 ┌─────────────────────────────────────────────────────────────┐
 │ Endereço  │ Tamanho │ Descrição              │ Formato      │
 ├───────────┼─────────┼────────────────────────┼──────────────┤
@@ -132,7 +133,7 @@ graph LR
 │ 5         │ 1 byte  │ Índice atual registro  │ 0-79         │
 │ 20-819    │ 800 bytes│ Registros (80×10)     │ Timestamp+   │
 │           │         │                        │ Sensores     │
-└───────────┴─────────┴────────────────────────┴──────────────┘
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ### Máquina de Estados
@@ -169,7 +170,7 @@ stateDiagram-v2
 | **Noturno** | 15-25°C | 35-60% | <10% | ✅ | ❌ | 10 min |
 | **Estufa** | 22-30°C | 50-80% | <90% | ✅ | ✅ | 5 min |
 | **Ambiente** | 16-26°C | 40-70% | <60% | ✅ | ✅ | 2 min |
-
+*Nota sobre o Salvamento de Dados: O sistema salva os registros apenas quando uma condição de alerta é detectada. O intervalo configurado para cada modo (ex: 2 min, 5 min) é usado em conjunto com o modo "Noturno Automático", e não mais como um temporizador de salvamento independente.
 </div>
 
 ### Visualização dos Modos
@@ -216,8 +217,12 @@ switch(modoSistema) {
 ⚙️ SISTEMA
    ├── Modos do sistema
    ├── Unidade temperatura (°C/°F)
+   ├── Conf de audio (NOVO!)
+   └── Voltar
+
+🔊 CONFIGURAÇÕES DE ÁUDIO (NOVO!)
    ├── Idioma (PT/EN)
-   ├── Áudio (ON/OFF)
+   ├── Som (ON/OFF)
    └── Voltar
 
 📊 REGISTROS
