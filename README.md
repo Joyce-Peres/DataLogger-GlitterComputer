@@ -285,6 +285,8 @@ switch(modoSistema) {
 
 ## 📱 Comunicação Bluetooth
 
+Baixe o aplicativo oficial do Glitter Computer: [📲 Download do app](https://drive.google.com/uc?export=download&id=12PkN6zYALZG0rEajEAol30ZTzrW8Svxc)
+
 ### Comandos Disponíveis
 
 | Comando | Ação |
